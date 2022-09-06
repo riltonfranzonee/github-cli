@@ -8,7 +8,7 @@ def prompt_search_term
   gets.chomp
 end
 
-# Formaters
+# formatters
 def encode_query(query) 
   CGI.escape(query)
 end

@@ -1,7 +1,9 @@
-require_relative 'api.rb'
+require_relative 'GitHubAPI.rb'
 require_relative 'utils.rb'
 
-rate_limit = get_rate_limit()
+github = GitHubAPI.new()
+
+rate_limit = github.get_rate_limit()
 
 if(rate_limit['remaining'] == 0) then
   available_at = Time.at(rate_limit['reset']).to_s
@@ -18,7 +20,7 @@ end
 
 puts "\nLoading...\n"
 
-repositories = get_github_repositories(query)
+repositories = github.get_repositories(query)
 
 if(repositories.length == 0) then
   puts "\n" + 'No repositories were found with the term "' + query + '"'

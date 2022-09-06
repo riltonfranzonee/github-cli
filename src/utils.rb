@@ -18,5 +18,5 @@ def format_repositories(repositories)
     { repository: repository['name'], url: repository['html_url'], description: repository['description'], github_username: repository['owner']['login'] }
   end
 
-  return JSON.pretty_generate(formatted_repositories)
+  JSON.pretty_generate(formatted_repositories)
 end

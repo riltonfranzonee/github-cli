@@ -2,7 +2,7 @@ require_relative '../services/GitHubAPI.rb'
 require_relative '../utils/Utils.rb'
 
 class RepositoryFinder 
-  def execute
+  def execute(query)
     github = GitHubAPI.new()
 
     rate_limit = github.get_rate_limit()
@@ -12,9 +12,7 @@ class RepositoryFinder
       puts "You have reached the maximum number of requests per minute. Try again after " + available_at
       return
     end
-    
-    query = prompt_search_term()
-    
+        
     if query.empty? then
      puts "You must provide a search term\n"
      return 

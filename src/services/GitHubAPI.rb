@@ -14,7 +14,7 @@ class GitHubAPI
   
   def get_rate_limit 
     response = RestClient.get(GITHUB_URL + '/rate_limit')
-  
+
     parsed_response = JSON.parse(response)
   
     parsed_response['resources']['search']

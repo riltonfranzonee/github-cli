@@ -2,6 +2,8 @@ require_relative 'features/RepositoryFinder.rb'
 
 repository_finder = RepositoryFinder.new
 
-repository_finder.execute()
+query = prompt_search_term()
+
+repository_finder.execute(query)
 
 

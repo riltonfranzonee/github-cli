@@ -28,7 +28,7 @@ $ bundle install
 scripts/start
 ```
 
-***Note: If the `scripts/start` is not executable in your machine,  run `chmod u+x scripts/start   ` and you should be good to go***. Alternatively, you can manually run `ruby src/index.rb `.
+**Note: If the `scripts/start` is not executable in your machine,  run `chmod u+x scripts/start   ` and you should be good to go**. Alternatively, you can manually run `ruby src/index.rb `.
 
 ## Integration tests
 
@@ -43,6 +43,6 @@ In order to test it you can simply run:
 scripts/test
 ```
 
-***Note: If the `scripts/test` is not executable in your machine,  run `chmod u+x scripts/test   ` and you should be good to go***. Alternatively, you can manually run `bin/rspec --format doc `.
+**Note: If the `scripts/test` is not executable in your machine,  run `chmod u+x scripts/test   ` and you should be good to go**. Alternatively, you can manually run `bin/rspec --format doc `.
 
 
